@@ -1,0 +1,911 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title IZI Prototype
+
+    link rel="stylesheet" href="css/bootstrap.css"
+    link rel="stylesheet" href="css/font-awesome.css"
+    link rel="stylesheet" href="css/jplayer.blue.monday.css"
+    link rel="stylesheet" href="css/prototype.css"
+
+  body
+
+    .navigation.navbar-fixed-top
+
+      .museum_navigation_menu
+        .museum_navbar.row
+          .left_content
+            i.icon-external-link 
+            a.top_nav href="#"            
+              | Open in new Tab
+            i.icon-bar-chart
+            a.top_nav href="#"
+              | Statistic
+            i.icon-plus-sign
+            a.top_nav href="#"
+              | New museum
+            i.icon-plus-sign
+            a.top_nav href="#" 
+              | New Tour
+          .right_content.navbar-right
+            .searches
+              .search
+                i.icon-search
+                a href="#"
+                  | Search
+              .search_input
+                input.form-control type="text" placeholder="Search"
+                a.search_reset href='#'
+                  i.icon-remove-sign
+            .dropdown
+              a#visibility_filter data-toggle="dropdown" href="#"
+                | pman89@yandex.ru
+                span.caret
+              ul.dropdown-menu aria-labelledby="visibility_filter" role="menu"
+                li role="presentation"
+                  a role="menuitem" tabindex="-1" href="http://twitter.com/fat" Action
+                li role="presentation"
+                  a role="menuitem" tabindex="-1" href="http://twitter.com/fat" Action
+                li role="presentation"
+                  a role="menuitem" tabindex="-1" href="http://twitter.com/fat" Action
+        
+        .museum_filters
+          a.active href="#"
+            i.icon-time
+          a href="#"
+            i.icon-home
+          a href="#"
+            i.icon-map-marker
+
+        
+        ul.museum_list
+
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Imperial Peace Museum, 
+                span London
+
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Imperial War Museum, 
+                span Paris
+
+          li
+            a href="#"
+              span.package_status.process
+                i.icon-refresh
+              img src="/img/museum.jpg"
+              h4 
+                | Republican War Museum, 
+                span Rome
+
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Imperial War Exhibition, 
+                span Tokio
+
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Republican Peace Exhibition, 
+                span Moscow
+
+          li
+            a.active href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Republican Peace Museum, 
+                span Berlin
+
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Imperial Peace Exhibition, 
+                span London
+     
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Republican War Exhibition, 
+                span Rome
+
+          li
+            a href="#"
+              span.package_status.generated
+                i.icon-ok-sign
+              img src="/img/museum.jpg"
+              h4 
+                | Just a humble museum, 
+                span Berlin
+
+      .navbar.navbar-default
+        .left_content
+          a.menu_opener href="#" 
+            i.icon-reorder
+          h1.museum_title Museum of modern art
+          .btn-group.language
+            button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+              | English    
+              span.caret
+            ul.dropdown-menu role="menu"
+              li
+                a href="#" Russian
+              li
+                a href="#" Spanish
+              li
+                a href="#" English
+              li.divider
+              li
+                a href="#" New language
+          .btn-group
+        .right_content
+          span.autosaved_info Changes autosaved at 19:46
+          .btn-group
+            button.btn.btn-success type="button" Updateted to everyone
+            button.btn.btn-success.dropdown-toggle data-toggle="dropdown" type="button"
+              .extra
+                i.icon-globe
+              span.caret
+            ul.dropdown-menu role="menu"
+              li
+                a href="#" 1
+              li
+                a href="#" 2
+              li
+                a href="#" 3
+
+      .actions_bar
+        .left_content
+          button.btn.btn-warning.spacer#create_new_item type="button" New item 
+          .btn-group
+            button.btn.btn-default.dropdown-toggle.spacer data-toggle="dropdown" type="button"
+              | Actions  
+              span.caret
+            ul.dropdown-menu role="menu"
+              li
+                a href="#" 1
+              li
+                a href="#" 2
+              li
+                a href="#" 3
+          .btn-group.spacer
+            button.btn.btn-default.undo type="button" 
+              i.icon-undo
+            button.btn.btn-default.redo type="button" 
+              i.icon-repeat
+
+        .right_content
+          span.limits.spacer
+            | All items: 
+            b 50-150
+            |  of 
+            b 304 
+          .btn-group.spacer
+            button.btn.btn-default.prev type="button" 
+              i.icon-chevron-left
+            button.btn.btn-default.next type="button" 
+              i.icon-chevron-right
+          input.form-control.search.spacer type="text" placeholder="Search"
+          button.btn.btn-default.filter_opener type="button" Filters
+
+      .filters_bar
+        a.clear_fiters.spacer href="#" Clear filters
+
+        .dropdown
+          a#visibility_filter data-toggle="dropdown" href="#"
+            | Visibility in mobile application 
+            span.caret
+          ul.dropdown-menu aria-labelledby="visibility_filter" role="menu"
+            li role="presentation"
+              a role="menuitem" tabindex="-1" href="http://twitter.com/fat" Action
+            li role="presentation"
+              a role="menuitem" tabindex="-1" href="http://twitter.com/fat" Action
+            li role="presentation"
+              a role="menuitem" tabindex="-1" href="http://twitter.com/fat" Action
+
+    .page-wrapper
+      .page
+        ul.exhibits
+
+          li#drop_down.hidden
+            .prev-ex
+            .images
+            .description
+              .btn-group.pull-right.item_publish_settings
+                button.btn.btn-success.dropdown-toggle data-toggle="dropdown" type="button"
+                  .extra
+                    i.icon-user
+                  | Publish  
+                  span.caret
+                ul.dropdown-menu role="menu"
+                  .status-select-dropdown
+                    form accept-charset="UTF-8" action="/1/museums/1/exhibits/8" class="simple_form status-select-inline" data-remote="true" id="edit_exhibit_8" method="post" novalidate="novalidate"
+                      div style="margin:0;padding:0;display:inline"
+                        input name="utf8" type="hidden" value="✓"
+                        input name="_method" type="hidden" value="put"
+                        input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="
+                      div.status-select.control-group.radio_buttons.required
+                        label.radio_buttons.required.control-label
+                          .required-symbol
+                            abbr title="required"
+                          | Who can see it in mobile application
+                        .controls
+                          div
+                            input.radio_buttons.required.radio checked="checked" data-status-text="Published" id="exhibit_8_status_published" name="exhibit[status]" type="radio" value="published"
+                            label.radio for="exhibit_8_status_published"
+                              .label-content.everyone
+                                i.icon-globe
+                                |  Everyone
+                          div
+                            input.radio_buttons.required.radio data-status-text="Limited" id="exhibit_8_status_limited" name="exhibit[status]" type="radio" value="limited"
+                            label.radio for="exhibit_8_status_limited"
+                              .label-content.passcode
+                                i.icon-user 
+                                |  Only users who have passcode
+                            .limited-pass-hint.hidden
+                              .limited-pass pzicen
+                              a href="/1/content_provider/edit#passcode" target="_blank" Edit
+                    li.divider
+                    li.other_list
+                      a.other_lang href="#" Other languages
+                      ul.other.hidden
+                        li 
+                          span.col-lg-4 English 
+                          i.icon-globe
+                        li
+                          span.col-lg-4 Italian 
+                          i.icon-lock
+                        li 
+                          span.col-lg-4 Japan
+              a.delete_story data-toggle="modal" href="#delete_story"
+                i.icon-trash
+              .modal.fade id="delete_story" tabindex="-1" role="dialog" aria-hidden="true"
+                .modal-dialog
+                  .modal-content
+                    .modal-body
+                      form.form-horizontal
+                        .form-group
+                          label.control-label for="lang_en"
+                            input type="radio" name="language" value="en" id="lang_en"
+                            | Delete only English language
+                        .form-group
+                          label.control-label for="lang_all"
+                            input type="radio" name="language" value="all" id="lang_all"
+                            | Delete all languages
+                        .form-group
+                          label.control-label.lang_selected for="lang_selected"
+                            input type="radio" name="language" value="selected" id="lang_selected"
+                            | Delete only selected languages
+                        .form-group.other_variants
+                          |111111
+                    .modal-footer
+                        button type="button" class="btn btn-default" data-dismiss="modal" Delete
+                        button type="button" class="btn btn-primary" data-dismiss="modal" Cancel
+              ul.nav.nav-tabs.nav-tabs-google
+                li.active
+                  a href="#media" data-toggle="tab" Media content
+                li
+                  a href="#quiz"  data-toggle="tab" Quiz
+                li
+                  a href="#qr_code" data-toggle="tab" QR-code
+                li
+                  a href="#more" data-toggle="tab" More
+              #tabs_content.tab-content
+                #media.tab-pane.row.active
+                  form.form-horizontal role="form"
+                    .form-group
+                      label.col-lg-2.control-label for="opas_number"
+                        | OPAS number
+                      .help
+                        i.icon-question-sign data-placement="bottom" data-content="Supplementary field. You may indicate the exhibit’s inventory, or any other number, that will help you to identify the exhibit within your own internal information system."
+                      .col-lg-6.trigger
+                        span.placeholder 21
+                      .col-lg-6.triggered
+                        input#opas_number.form-control type="text"
+                      .save_status
+                        i.icon-ok-sign
+                        | saved
+                    .form-group
+                      label.col-lg-2.control-label for="name"
+                        | Name
+                      .help
+                        i.icon-question-sign data-placement="bottom" data-content="Supplementary field. You may indicate the exhibit’s inventory, or any other number, that will help you to identify the exhibit within your own internal information system."
+                      .col-lg-6.trigger
+                        span.placeholder An Allegory of Prudence
+                      .col-lg-6.triggered
+                        input#name.form-control type="text"
+                      .save_status
+                        i.icon-ok-sign
+                        | saved
+                    .form-group
+                      label.col-lg-2.control-label for="audio"
+                        | Audio
+                      .help
+                        i.icon-question-sign data-placement="bottom" data-content="Supplementary field. You may indicate the exhibit’s inventory, or any other number, that will help you to identify the exhibit within your own internal information system."
+                      .col-lg-6
+                        #jquery_jplayer_1.jp-jplayer
+                        #jp_container_1.jp-audio
+                          .jp-type-single
+                            .jp-gui.jp-interface
+                              ul.jp-controls
+                                li
+                                  a.jp-play href="javascript:;" tabindex="1"
+                                li
+                                  a.jp-pause href="javascript:;" tabindex="1"
+                            .dropdown
+                              a#visibility_filter data-toggle="dropdown" href="#"
+                                | Audioguide 01
+                                span.caret
+                              ul.dropdown-menu aria-labelledby="visibility_filter" role="menu"
+                                li role="presentation"
+                                  a role="menuitem" tabindex="-1" href="#" Replace
+                                li role="presentation"
+                                  a role="menuitem" tabindex="-1" href="#" Download
+                            .jp-progress
+                              .jp-seek-bar
+                                .jp-play-bar
+                            .jp-time-holder
+                              .jp-current-time
+                              .jp-duration
+                            .jp-no-solution
+                              span Update Required
+                              | To play the media you will need to either update your browser to a recent version or update your browser to a recent version or update your 
+                              a href="http://get.adobe.com/flashplayer/" target="_blank"
+
+                    .form-group
+                      label.col-lg-2.control-label for="description"
+                        | Description
+                      .help
+                        i.icon-question-sign data-placement="bottom" data-content="Supplementary field. You may indicate the exhibit’s inventory, or any other number, that will help you to identify the exhibit within your own internal information system."
+                      .col-lg-6.trigger
+                        span.placeholder.large Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit ametLorem upsum dolor sit ametLoremLorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit ametLorem upsum dolor sit ametLoremLorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit ametLorem upsum dolor sit ametLoremLorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet Lorem upsum dolor sit amet
+                      .col-lg-6.triggered
+                        textarea.form-control
+                      .save_status
+                        i.icon-ok-sign
+                        | saved
+                    .form-group.last
+                      .pull-right.done_button
+                        a.btn.btn-default.done href="#" Done
+                #quiz.tab-pane.row
+                  .form-wrap
+                    form#story_form.simple_form.form-horizontal accept-charset="UTF-8" action="/1/story_sets/2/stories/2" data-id="2" data-liftable="true" method="post" novalidate="novalidate"
+                      div style="margin:0;padding:0;display:inline"
+                        input name="utf8" type="hidden" value="✓"
+                          input name="_method" type="hidden" value="put"
+                            input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="
+                      fieldset
+                        .add-quiz.control-group.hidden
+                          label.control-label Quiz
+                          .controls
+                            p.help-block
+                              a Create Quiz
+                        .quiz
+                          .control-group
+                            .controls
+                              input#story_quiz_attributes__destroy.hidden name="story[quiz_attributes][_destroy]" type="hidden" value=""
+                                p.help-block.pull-right
+                                  a.destroy Delete Quiz
+                          .form-group.string.required
+                            label.string.required.control-label.col-lg-2 for="story_quiz_attributes_question"
+                              abbr title="required"
+                              | Question
+                            .help
+                            .col-lg-6.trigger
+                              span.placeholder are you sure?
+                            .col-lg-6.triggered
+                              input#story_quiz_attributes_question.string.required.form-control name="story[quiz_attributes][question]" placeholder="Enter question" size="50" type="text" value="are you sure?"
+                            .save_status
+                              i.icon-ok-sign>
+                              | saved
+                          .control-group.error
+                            .controls
+                          .answers
+                            label.hidden.correct-label Correct Answer
+                            .form-group.hidden
+                              .help
+                              .col-lg-6.trigger
+                                span.placeholder t
+                              .col-lg-6.triggered
+                                input#story_quiz_attributes_answers_attributes_0_correct.hidden name="story[quiz_attributes][answers_attributes][0][correct]" type="hidden" value="t"
+                              .save_status
+                                i.icon-ok-sign>
+                                | saved
+                            .form-group.string.optional
+                              label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_0_content"
+                              .help
+                              .col-lg-6.trigger
+                                span.placeholder yes!
+                              .col-lg-6.triggered
+                                input#story_quiz_attributes_answers_attributes_0_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][0][content]" placeholder="Enter option" size="50" type="text" value="yes!"
+                              .save_status
+                                i.icon-ok-sign>
+                                | saved
+                            input#story_quiz_attributes_answers_attributes_0_id name="story[quiz_attributes][answers_attributes][0][id]" type="hidden" value="1"
+                              .form-group.hidden
+                                .help
+                                .col-lg-6.trigger
+                                  span.placeholder f
+                                .col-lg-6.triggered
+                                  input#story_quiz_attributes_answers_attributes_1_correct.hidden name="story[quiz_attributes][answers_attributes][1][correct]" type="hidden" value="f"
+                                .save_status
+                                  i.icon-ok-sign>
+                                  | saved
+                              .form-group.string.optional
+                                label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_1_content"
+                                .help
+                                .col-lg-6.trigger
+                                  span.placeholder may be
+                                .col-lg-6.triggered
+                                  input#story_quiz_attributes_answers_attributes_1_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][1][content]" placeholder="Enter option" size="50" type="text" value="may be"
+                                .save_status
+                                  i.icon-ok-sign>
+                                  | saved
+                              input#story_quiz_attributes_answers_attributes_1_id name="story[quiz_attributes][answers_attributes][1][id]" type="hidden" value="2"
+                                .form-group.hidden
+                                  .help
+                                  .col-lg-6.trigger
+                                    span.placeholder f
+                                  .col-lg-6.triggered
+                                    input#story_quiz_attributes_answers_attributes_2_correct.hidden name="story[quiz_attributes][answers_attributes][2][correct]" type="hidden" value="f"
+                                  .save_status
+                                    i.icon-ok-sign>
+                                    | saved
+                                .form-group.string.optional
+                                  label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_2_content"
+                                  .help
+                                  .col-lg-6.trigger
+                                    span.placeholder who can be sure now?
+                                  .col-lg-6.triggered
+                                    input#story_quiz_attributes_answers_attributes_2_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][2][content]" placeholder="Enter option" size="50" type="text" value="who can be sure now?"
+                                  .save_status
+                                    i.icon-ok-sign>
+                                    | saved
+                                input#story_quiz_attributes_answers_attributes_2_id name="story[quiz_attributes][answers_attributes][2][id]" type="hidden" value="3"
+                                  .form-group.hidden
+                                    .help
+                                    .col-lg-6.trigger
+                                      span.placeholder f
+                                    .col-lg-6.triggered
+                                      input#story_quiz_attributes_answers_attributes_3_correct.hidden name="story[quiz_attributes][answers_attributes][3][correct]" type="hidden" value="f"
+                                    .save_status
+                                      i.icon-ok-sign>
+                                      | saved
+                                  .form-group.string.optional
+                                    label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_3_content"
+                                    .help
+                                    .col-lg-6.trigger
+                                      span.placeholder nope
+                                    .col-lg-6.triggered
+                                      input#story_quiz_attributes_answers_attributes_3_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][3][content]" placeholder="Enter option" size="50" type="text" value="nope"
+                                    .save_status
+                                      i.icon-ok-sign>
+                                      | saved
+                                  input#story_quiz_attributes_answers_attributes_3_id name="story[quiz_attributes][answers_attributes][3][id]" type="hidden" value="4"
+                          .form-group.text.optional
+                            label.text.optional.control-label.col-lg-2 for="story_quiz_attributes_comment" Description
+                            .help
+                            .col-lg-6.trigger
+                              span.placeholder.large are you kidding?
+                            .col-lg-6.triggered
+                              textarea#story_quiz_attributes_comment.text.optional.form-control cols="40" name="story[quiz_attributes][comment]" placeholder="You can explain the correct answer" rows="20"
+                            .save_status
+                              i.icon-ok-sign>
+                              | saved
+                        input#story_quiz_attributes_id name="story[quiz_attributes][id]" type="hidden" value="1"
+
+                #qr_code.tab-pane.row
+                  .qr_image.col-lg-4
+                    img#qr alt="Qr_code" src="/img/qr_code.png"
+                  .well.col-lg-4
+                    a.btn.qr-code href="/1/story_sets/8/qr_code.html" target="_blank" Print QR-code
+                    br
+                      p You can print the Exhibit's QR-code and place it near the Exhibit. When the MTG Client reads this code, it will open the Exhibit's page immediately. If there is no MTG Client installed on the user's phone, then it will take the user to a download page on either AppStore or Google Play.
+
+                #more.tab-pane
+                  |hgsdfklghdfj kgkjdf hg
+
+
+            .next-ex
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener.draft
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg'
+              .description
+                h4 1. Богоматерь Владимирская, с двунадесятыми праздниками
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      .status-select-dropdown
+                        form accept-charset="UTF-8" action="/1/museums/1/exhibits/8" class="simple_form status-select-inline" data-remote="true" id="edit_exhibit_8" method="post" novalidate="novalidate"
+                          div style="margin:0;padding:0;display:inline"
+                            input name="utf8" type="hidden" value="✓"
+                            input name="_method" type="hidden" value="put"
+                            input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="
+                          div.status-select.control-group.radio_buttons.required
+                            label.radio_buttons.required.control-label
+                              .required-symbol
+                                abbr title="required"
+                              | Who can see it in mobile application
+                            .controls
+                              div
+                                input.radio_buttons.required.radio checked="checked" data-status-text="Published" id="exhibit_8_status_published" name="exhibit[status]" type="radio" value="published"
+                                label.radio for="exhibit_8_status_published"
+                                  .label-content
+                                    i.icon-globe
+                                    |  Everyone
+                              div
+                                input.radio_buttons.required.radio data-status-text="Limited" id="exhibit_8_status_limited" name="exhibit[status]" type="radio" value="limited"
+                                label.radio for="exhibit_8_status_limited"
+                                  .label-content
+                                    i.icon-user 
+                                    |  Only users who have passcode
+                                .limited-pass-hint.hidden
+                                  .limited-pass pzicen
+                                  a href="/1/content_provider/edit#passcode" target="_blank" Edit
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/a330229f-c4fa-4ab9-8516-059f5a034f00/cd295547-d4a6-4877-8682-0680b94491e4_480x360.jpg' data-src=''
+              .description
+                h4 2 Картина 2
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      .status-select-dropdown
+                        form accept-charset="UTF-8" action="/1/museums/1/exhibits/8" class="simple_form status-select-inline" data-remote="true" id="edit_exhibit_8" method="post" novalidate="novalidate"
+                          div style="margin:0;padding:0;display:inline"
+                            input name="utf8" type="hidden" value="✓"
+                            input name="_method" type="hidden" value="put"
+                            input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="
+                          div.status-select.control-group.radio_buttons.required
+                            label.radio_buttons.required.control-label
+                              .required-symbol
+                                abbr title="required"
+                              | Who can see it in mobile application
+                            .controls
+                              div
+                                input.radio_buttons.required.radio checked="checked" data-status-text="Published" id="exhibit_8_status_published" name="exhibit[status]" type="radio" value="published"
+                                label.radio for="exhibit_8_status_published"
+                                  .label-content
+                                    i.icon-globe
+                                    |  Everyone
+                              div
+                                input.radio_buttons.required.radio data-status-text="Limited" id="exhibit_8_status_limited" name="exhibit[status]" type="radio" value="limited"
+                                label.radio for="exhibit_8_status_limited"
+                                  .label-content
+                                    i.icon-user 
+                                    |  Only users who have passcode
+                                .limited-pass-hint.hidden
+                                  .limited-pass pzicen
+                                  a href="/1/content_provider/edit#passcode" target="_blank" Edit
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 3 Картина 3
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 4 Картина 4
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 5 Картина 5
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 6 Картина 6
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 7 Картина 7
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 8 Картина 8
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 9 Картина 9
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 10 Картина 10
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+          li.exhibit data-big-image='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/14845c98-05ec-4da8-8aff-11808ecc123f_800x600.jpg' data-full-object-path="/description.json"
+            .opener
+              .overlay
+              .checkbox
+                input type="checkbox"
+              .image
+                img src='http://media.izi.travel/fc85dcc2-3e95-40a9-9a78-14705a106230/7104d8b7-2f73-4b98-bfb2-b4245a325ce3_480x360.jpg' data-src=''
+              .description
+                h4 11 Картина 11
+              .visibility
+                i.icon-globe.placeholder
+                .on_hover
+                  .btn-group
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      .extra_right
+                        i.icon-globe
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#" 
+                          i.icon-globe
+                          | Public
+                      li
+                        a href="#" 
+                          i.icon-user
+                          | Closed
+                      li
+                        a href="#" 
+                          i.icon-lock
+                          | Draft
+
+    script src="js/jquery-1.10.2.js" type="text/javascript"
+    script src="js/bootstrap.js" type="text/javascript"
+    script src="js/jquery.scrollTo.js" type="text/javascript"
+    script src="js/jquery.jplayer.min.js" type="text/javascript"
+    script src="js/prototype.js" type="text/javascript"
+    / = javascript_include_tag translations_path(format: :js), :application
