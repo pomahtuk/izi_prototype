@@ -7,6 +7,7 @@ html
     link rel="stylesheet" href="css/bootstrap.css"
     link rel="stylesheet" href="css/font-awesome.css"
     link rel="stylesheet" href="css/jplayer.blue.monday.css"
+    link rel="stylesheet" href="css/toggle-switch.css"
     link rel="stylesheet" href="css/prototype.css"
 
   body
@@ -300,8 +301,23 @@ html
                           label.control-label.lang_selected for="lang_selected"
                             input type="radio" name="language" value="selected" id="lang_selected"
                             | Delete only selected languages
-                        .form-group.other_variants
-                          |111111
+                        .other_variants
+                          .form-group
+                            label.control-label for="language_en"
+                              input type="checkbox" name="language_en" value="selected" id="language_en"
+                              | English
+                          .form-group
+                            label.control-label for="language_ru"
+                              input type="checkbox" name="language_ru" value="selected" id="language_ru"
+                              | Russian
+                          .form-group
+                            label.control-label for="language_it"
+                              input type="checkbox" name="language_it" value="selected" id="language_it"
+                              | Italian
+                          .form-group
+                            label.control-label for="language_fr"
+                              input type="checkbox" name="language_fr" value="selected" id="language_fr"
+                              | French
                     .modal-footer
                         button type="button" class="btn btn-default" data-dismiss="modal" Delete
                         button type="button" class="btn btn-primary" data-dismiss="modal" Cancel
@@ -392,131 +408,90 @@ html
                       .pull-right.done_button
                         a.btn.btn-default.done href="#" Done
                 #quiz.tab-pane.row
+                  .switch.ios
+                    input id="story_quiz_enabled" name="story_quiz_enabled" type="radio" checked=""
+                    label for="story_quiz_enabled" Enabled
+                    input id="story_quiz_disabled" name="story_quiz_enabled" type="radio"
+                    label for="story_quiz_disabled" Disable
+                    span.slide-button
+
                   .form-wrap
                     form#story_form.simple_form.form-horizontal accept-charset="UTF-8" action="/1/story_sets/2/stories/2" data-id="2" data-liftable="true" method="post" novalidate="novalidate"
                       div style="margin:0;padding:0;display:inline"
                         input name="utf8" type="hidden" value="✓"
-                          input name="_method" type="hidden" value="put"
-                            input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="
+                        input name="_method" type="hidden" value="put"
+                        input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="
                       fieldset
-                        .add-quiz.control-group.hidden
-                          label.control-label Quiz
+                        .form-group.string.required
+                          label.string.required.control-label.col-lg-2 for="story_quiz_attributes_question"
+                            abbr title="required" *
+                            | Question
+                          .help
+                          .col-lg-6.trigger
+                            span.placeholder are you sure?
+                          .col-lg-6.triggered
+                            input#story_quiz_attributes_question.string.required.form-control name="story[quiz_attributes][question]" placeholder="Enter question" size="50" type="text" value="are you sure?"
+                          .save_status
+                            i.icon-ok-sign
+                            | saved
+                        .error
                           .controls
-                            p.help-block
-                              a Create Quiz
-                        .quiz
-                          .control-group
-                            .controls
-                              input#story_quiz_attributes__destroy.hidden name="story[quiz_attributes][_destroy]" type="hidden" value=""
-                                p.help-block.pull-right
-                                  a.destroy Delete Quiz
-                          .form-group.string.required
-                            label.string.required.control-label.col-lg-2 for="story_quiz_attributes_question"
-                              abbr title="required"
-                              | Question
+                        .answers
+                          label.hidden.correct-label Correct Answer
+                          .form-group.string.optional.checkbox_added
+                            label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_0_content"
                             .help
-                            .col-lg-6.trigger
-                              span.placeholder are you sure?
-                            .col-lg-6.triggered
-                              input#story_quiz_attributes_question.string.required.form-control name="story[quiz_attributes][question]" placeholder="Enter question" size="50" type="text" value="are you sure?"
+                            input.coorect_answer_radio type="radio" name="correct_answer"
+                            .col-lg-5.trigger
+                              span.placeholder yes!
+                            .col-lg-5.triggered
+                              input#story_quiz_attributes_answers_attributes_0_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][0][content]" placeholder="Enter option" size="50" type="text" value="yes!"
                             .save_status
-                              i.icon-ok-sign>
+                              i.icon-ok-sign
                               | saved
-                          .control-group.error
-                            .controls
-                          .answers
-                            label.hidden.correct-label Correct Answer
-                            .form-group.hidden
-                              .help
-                              .col-lg-6.trigger
-                                span.placeholder t
-                              .col-lg-6.triggered
-                                input#story_quiz_attributes_answers_attributes_0_correct.hidden name="story[quiz_attributes][answers_attributes][0][correct]" type="hidden" value="t"
-                              .save_status
-                                i.icon-ok-sign>
-                                | saved
-                            .form-group.string.optional
-                              label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_0_content"
-                              .help
-                              .col-lg-6.trigger
-                                span.placeholder yes!
-                              .col-lg-6.triggered
-                                input#story_quiz_attributes_answers_attributes_0_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][0][content]" placeholder="Enter option" size="50" type="text" value="yes!"
-                              .save_status
-                                i.icon-ok-sign>
-                                | saved
-                            input#story_quiz_attributes_answers_attributes_0_id name="story[quiz_attributes][answers_attributes][0][id]" type="hidden" value="1"
-                              .form-group.hidden
-                                .help
-                                .col-lg-6.trigger
-                                  span.placeholder f
-                                .col-lg-6.triggered
-                                  input#story_quiz_attributes_answers_attributes_1_correct.hidden name="story[quiz_attributes][answers_attributes][1][correct]" type="hidden" value="f"
-                                .save_status
-                                  i.icon-ok-sign>
-                                  | saved
-                              .form-group.string.optional
-                                label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_1_content"
-                                .help
-                                .col-lg-6.trigger
-                                  span.placeholder may be
-                                .col-lg-6.triggered
-                                  input#story_quiz_attributes_answers_attributes_1_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][1][content]" placeholder="Enter option" size="50" type="text" value="may be"
-                                .save_status
-                                  i.icon-ok-sign>
-                                  | saved
-                              input#story_quiz_attributes_answers_attributes_1_id name="story[quiz_attributes][answers_attributes][1][id]" type="hidden" value="2"
-                                .form-group.hidden
-                                  .help
-                                  .col-lg-6.trigger
-                                    span.placeholder f
-                                  .col-lg-6.triggered
-                                    input#story_quiz_attributes_answers_attributes_2_correct.hidden name="story[quiz_attributes][answers_attributes][2][correct]" type="hidden" value="f"
-                                  .save_status
-                                    i.icon-ok-sign>
-                                    | saved
-                                .form-group.string.optional
-                                  label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_2_content"
-                                  .help
-                                  .col-lg-6.trigger
-                                    span.placeholder who can be sure now?
-                                  .col-lg-6.triggered
-                                    input#story_quiz_attributes_answers_attributes_2_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][2][content]" placeholder="Enter option" size="50" type="text" value="who can be sure now?"
-                                  .save_status
-                                    i.icon-ok-sign>
-                                    | saved
-                                input#story_quiz_attributes_answers_attributes_2_id name="story[quiz_attributes][answers_attributes][2][id]" type="hidden" value="3"
-                                  .form-group.hidden
-                                    .help
-                                    .col-lg-6.trigger
-                                      span.placeholder f
-                                    .col-lg-6.triggered
-                                      input#story_quiz_attributes_answers_attributes_3_correct.hidden name="story[quiz_attributes][answers_attributes][3][correct]" type="hidden" value="f"
-                                    .save_status
-                                      i.icon-ok-sign>
-                                      | saved
-                                  .form-group.string.optional
-                                    label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_3_content"
-                                    .help
-                                    .col-lg-6.trigger
-                                      span.placeholder nope
-                                    .col-lg-6.triggered
-                                      input#story_quiz_attributes_answers_attributes_3_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][3][content]" placeholder="Enter option" size="50" type="text" value="nope"
-                                    .save_status
-                                      i.icon-ok-sign>
-                                      | saved
-                                  input#story_quiz_attributes_answers_attributes_3_id name="story[quiz_attributes][answers_attributes][3][id]" type="hidden" value="4"
+                          .form-group.string.optional.checkbox_added
+                            label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_1_content"
+                            .help
+                            input.coorect_answer_radio type="radio" name="correct_answer"
+                            .col-lg-5.trigger
+                              span.placeholder may be
+                            .col-lg-5.triggered
+                              input#story_quiz_attributes_answers_attributes_1_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][1][content]" placeholder="Enter option" size="50" type="text" value="may be"
+                            .save_status
+                              i.icon-ok-sign
+                              | saved
+                          .form-group.string.optional.checkbox_added
+                            label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_2_content"
+                            .help
+                            input.coorect_answer_radio type="radio" name="correct_answer"
+                            .col-lg-5.trigger
+                              span.placeholder who can be sure now?
+                            .col-lg-5.triggered
+                              input#story_quiz_attributes_answers_attributes_2_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][2][content]" placeholder="Enter option" size="50" type="text" value="who can be sure now?"
+                            .save_status
+                              i.icon-ok-sign
+                              | saved
+                          .form-group.string.optional.checkbox_added
+                            label.string.optional.control-label.col-lg-2 for="story_quiz_attributes_answers_attributes_3_content"
+                            .help
+                            input.coorect_answer_radio type="radio" name="correct_answer"
+                            .col-lg-5.trigger
+                              span.placeholder nope
+                            .col-lg-5.triggered
+                              input#story_quiz_attributes_answers_attributes_3_content.string.optional.form-control name="story[quiz_attributes][answers_attributes][3][content]" placeholder="Enter option" size="50" type="text" value="nope"
+                            .save_status
+                              i.icon-ok-sign
+                              | saved
                           .form-group.text.optional
                             label.text.optional.control-label.col-lg-2 for="story_quiz_attributes_comment" Description
                             .help
-                            .col-lg-6.trigger
+                            .col-lg-5.trigger
                               span.placeholder.large are you kidding?
-                            .col-lg-6.triggered
+                            .col-lg-5.triggered
                               textarea#story_quiz_attributes_comment.text.optional.form-control cols="40" name="story[quiz_attributes][comment]" placeholder="You can explain the correct answer" rows="20"
                             .save_status
-                              i.icon-ok-sign>
+                              i.icon-ok-sign
                               | saved
-                        input#story_quiz_attributes_id name="story[quiz_attributes][id]" type="hidden" value="1"
 
                 #qr_code.tab-pane.row
                   .qr_image.col-lg-4

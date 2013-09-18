@@ -8,6 +8,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/jplayer.blue.monday.css" rel="stylesheet">
+    <link href="css/toggle-switch.css" rel="stylesheet">
     <link href="css/prototype.css" rel="stylesheet">
   </head>
   <body>
@@ -288,8 +289,19 @@
                         <div class="form-group">
                           <label class="control-label lang_selected" for="lang_selected"><input id="lang_selected" name="language" type="radio" value="selected">Delete only selected languages</label>
                         </div>
-                        <div class="form-group other_variants">
-                          111111
+                        <div class="other_variants">
+                          <div class="form-group">
+                            <label class="control-label" for="language_en"><input id="language_en" name="language_en" type="checkbox" value="selected">English</label>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="language_ru"><input id="language_ru" name="language_ru" type="checkbox" value="selected">Russian</label>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="language_it"><input id="language_it" name="language_it" type="checkbox" value="selected">Italian</label>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="language_fr"><input id="language_fr" name="language_fr" type="checkbox" value="selected">French</label>
+                          </div>
                         </div>
                       </form>
                     </div>
@@ -415,168 +427,103 @@
                   </form>
                 </div>
                 <div class="tab-pane row" id="quiz">
+                  <div class="switch ios">
+                    <input checked="" id="story_quiz_enabled" name="story_quiz_enabled" type="radio"><label for="story_quiz_enabled">Enabled</label><input id="story_quiz_disabled" name="story_quiz_enabled" type="radio"><label for="story_quiz_disabled">Disable</label><span class="slide-button"></span>
+                  </div>
                   <div class="form-wrap">
                     <form accept-charset="UTF-8" action="/1/story_sets/2/stories/2" class="simple_form form-horizontal" data-id="2" data-liftable="true" id="story_form" method="post" novalidate="novalidate">
                       <div style="margin:0;padding:0;display:inline">
-                        <input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0="></input></input>
+                        <input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="oE0Ns9ypDjsWQrc0VHdsAqhAgEz0Q8Lx8pJQlyqQaq0=">
                       </div>
                       <fieldset>
-                        <div class="add-quiz control-group hidden">
-                          <label class="control-label">Quiz</label>
-                          <div class="controls">
-                            <p class="help-block">
-                              <a>Create Quiz</a>
-                            </p>
+                        <div class="form-group string required">
+                          <label class="string required control-label col-lg-2" for="story_quiz_attributes_question"><abbr title="required">*</abbr>Question</label>
+                          <div class="help"></div>
+                          <div class="col-lg-6 trigger">
+                            <span class="placeholder">are you sure?</span>
+                          </div>
+                          <div class="col-lg-6 triggered">
+                            <input class="string required form-control" id="story_quiz_attributes_question" name="story[quiz_attributes][question]" placeholder="Enter question" size="50" type="text" value="are you sure?">
+                          </div>
+                          <div class="save_status">
+                            <i class="icon-ok-sign"></i>saved
                           </div>
                         </div>
-                        <div class="quiz">
-                          <div class="control-group">
-                            <div class="controls">
-                              <input class="hidden" id="story_quiz_attributes__destroy" name="story[quiz_attributes][_destroy]" type="hidden" value="">
-                                <p class="help-block pull-right">
-                                  <a class="destroy">Delete Quiz</a>
-                                </p>
-                              </input>
-                            </div>
-                          </div>
-                          <div class="form-group string required">
-                            <label class="string required control-label col-lg-2" for="story_quiz_attributes_question"><abbr title="required"></abbr>Question</label>
+                        <div class="error">
+                          <div class="controls"></div>
+                        </div>
+                        <div class="answers">
+                          <label class="hidden correct-label">Correct Answer</label>
+                          <div class="form-group string optional checkbox_added">
+                            <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_0_content"></label>
                             <div class="help"></div>
-                            <div class="col-lg-6 trigger">
-                              <span class="placeholder">are you sure?</span>
+                            <input class="coorect_answer_radio" name="correct_answer" type="radio">
+                            <div class="col-lg-5 trigger">
+                              <span class="placeholder">yes!</span>
                             </div>
-                            <div class="col-lg-6 triggered">
-                              <input class="string required form-control" id="story_quiz_attributes_question" name="story[quiz_attributes][question]" placeholder="Enter question" size="50" type="text" value="are you sure?">
+                            <div class="col-lg-5 triggered">
+                              <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_0_content" name="story[quiz_attributes][answers_attributes][0][content]" placeholder="Enter option" size="50" type="text" value="yes!">
                             </div>
                             <div class="save_status">
-                              <i class="icon-ok-sign"></i> saved
+                              <i class="icon-ok-sign"></i>saved
                             </div>
                           </div>
-                          <div class="control-group error">
-                            <div class="controls"></div>
+                          <div class="form-group string optional checkbox_added">
+                            <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_1_content"></label>
+                            <div class="help"></div>
+                            <input class="coorect_answer_radio" name="correct_answer" type="radio">
+                            <div class="col-lg-5 trigger">
+                              <span class="placeholder">may be</span>
+                            </div>
+                            <div class="col-lg-5 triggered">
+                              <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_1_content" name="story[quiz_attributes][answers_attributes][1][content]" placeholder="Enter option" size="50" type="text" value="may be">
+                            </div>
+                            <div class="save_status">
+                              <i class="icon-ok-sign"></i>saved
+                            </div>
                           </div>
-                          <div class="answers">
-                            <label class="hidden correct-label">Correct Answer</label>
-                            <div class="form-group hidden">
-                              <div class="help"></div>
-                              <div class="col-lg-6 trigger">
-                                <span class="placeholder">t</span>
-                              </div>
-                              <div class="col-lg-6 triggered">
-                                <input class="hidden" id="story_quiz_attributes_answers_attributes_0_correct" name="story[quiz_attributes][answers_attributes][0][correct]" type="hidden" value="t">
-                              </div>
-                              <div class="save_status">
-                                <i class="icon-ok-sign"></i> saved
-                              </div>
+                          <div class="form-group string optional checkbox_added">
+                            <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_2_content"></label>
+                            <div class="help"></div>
+                            <input class="coorect_answer_radio" name="correct_answer" type="radio">
+                            <div class="col-lg-5 trigger">
+                              <span class="placeholder">who can be sure now?</span>
                             </div>
-                            <div class="form-group string optional">
-                              <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_0_content"></label>
-                              <div class="help"></div>
-                              <div class="col-lg-6 trigger">
-                                <span class="placeholder">yes!</span>
-                              </div>
-                              <div class="col-lg-6 triggered">
-                                <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_0_content" name="story[quiz_attributes][answers_attributes][0][content]" placeholder="Enter option" size="50" type="text" value="yes!">
-                              </div>
-                              <div class="save_status">
-                                <i class="icon-ok-sign"></i> saved
-                              </div>
+                            <div class="col-lg-5 triggered">
+                              <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_2_content" name="story[quiz_attributes][answers_attributes][2][content]" placeholder="Enter option" size="50" type="text" value="who can be sure now?">
                             </div>
-                            <input id="story_quiz_attributes_answers_attributes_0_id" name="story[quiz_attributes][answers_attributes][0][id]" type="hidden" value="1">
-                              <div class="form-group hidden">
-                                <div class="help"></div>
-                                <div class="col-lg-6 trigger">
-                                  <span class="placeholder">f</span>
-                                </div>
-                                <div class="col-lg-6 triggered">
-                                  <input class="hidden" id="story_quiz_attributes_answers_attributes_1_correct" name="story[quiz_attributes][answers_attributes][1][correct]" type="hidden" value="f">
-                                </div>
-                                <div class="save_status">
-                                  <i class="icon-ok-sign"></i> saved
-                                </div>
-                              </div>
-                              <div class="form-group string optional">
-                                <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_1_content"></label>
-                                <div class="help"></div>
-                                <div class="col-lg-6 trigger">
-                                  <span class="placeholder">may be</span>
-                                </div>
-                                <div class="col-lg-6 triggered">
-                                  <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_1_content" name="story[quiz_attributes][answers_attributes][1][content]" placeholder="Enter option" size="50" type="text" value="may be">
-                                </div>
-                                <div class="save_status">
-                                  <i class="icon-ok-sign"></i> saved
-                                </div>
-                              </div>
-                              <input id="story_quiz_attributes_answers_attributes_1_id" name="story[quiz_attributes][answers_attributes][1][id]" type="hidden" value="2">
-                                <div class="form-group hidden">
-                                  <div class="help"></div>
-                                  <div class="col-lg-6 trigger">
-                                    <span class="placeholder">f</span>
-                                  </div>
-                                  <div class="col-lg-6 triggered">
-                                    <input class="hidden" id="story_quiz_attributes_answers_attributes_2_correct" name="story[quiz_attributes][answers_attributes][2][correct]" type="hidden" value="f">
-                                  </div>
-                                  <div class="save_status">
-                                    <i class="icon-ok-sign"></i> saved
-                                  </div>
-                                </div>
-                                <div class="form-group string optional">
-                                  <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_2_content"></label>
-                                  <div class="help"></div>
-                                  <div class="col-lg-6 trigger">
-                                    <span class="placeholder">who can be sure now?</span>
-                                  </div>
-                                  <div class="col-lg-6 triggered">
-                                    <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_2_content" name="story[quiz_attributes][answers_attributes][2][content]" placeholder="Enter option" size="50" type="text" value="who can be sure now?">
-                                  </div>
-                                  <div class="save_status">
-                                    <i class="icon-ok-sign"></i> saved
-                                  </div>
-                                </div>
-                                <input id="story_quiz_attributes_answers_attributes_2_id" name="story[quiz_attributes][answers_attributes][2][id]" type="hidden" value="3">
-                                  <div class="form-group hidden">
-                                    <div class="help"></div>
-                                    <div class="col-lg-6 trigger">
-                                      <span class="placeholder">f</span>
-                                    </div>
-                                    <div class="col-lg-6 triggered">
-                                      <input class="hidden" id="story_quiz_attributes_answers_attributes_3_correct" name="story[quiz_attributes][answers_attributes][3][correct]" type="hidden" value="f">
-                                    </div>
-                                    <div class="save_status">
-                                      <i class="icon-ok-sign"></i> saved
-                                    </div>
-                                  </div>
-                                  <div class="form-group string optional">
-                                    <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_3_content"></label>
-                                    <div class="help"></div>
-                                    <div class="col-lg-6 trigger">
-                                      <span class="placeholder">nope</span>
-                                    </div>
-                                    <div class="col-lg-6 triggered">
-                                      <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_3_content" name="story[quiz_attributes][answers_attributes][3][content]" placeholder="Enter option" size="50" type="text" value="nope">
-                                    </div>
-                                    <div class="save_status">
-                                      <i class="icon-ok-sign"></i> saved
-                                    </div>
-                                  </div>
-                                  <input id="story_quiz_attributes_answers_attributes_3_id" name="story[quiz_attributes][answers_attributes][3][id]" type="hidden" value="4"></input></input></input>
+                            <div class="save_status">
+                              <i class="icon-ok-sign"></i>saved
+                            </div>
+                          </div>
+                          <div class="form-group string optional checkbox_added">
+                            <label class="string optional control-label col-lg-2" for="story_quiz_attributes_answers_attributes_3_content"></label>
+                            <div class="help"></div>
+                            <input class="coorect_answer_radio" name="correct_answer" type="radio">
+                            <div class="col-lg-5 trigger">
+                              <span class="placeholder">nope</span>
+                            </div>
+                            <div class="col-lg-5 triggered">
+                              <input class="string optional form-control" id="story_quiz_attributes_answers_attributes_3_content" name="story[quiz_attributes][answers_attributes][3][content]" placeholder="Enter option" size="50" type="text" value="nope">
+                            </div>
+                            <div class="save_status">
+                              <i class="icon-ok-sign"></i>saved
+                            </div>
                           </div>
                           <div class="form-group text optional">
                             <label class="text optional control-label col-lg-2" for="story_quiz_attributes_comment">Description</label>
                             <div class="help"></div>
-                            <div class="col-lg-6 trigger">
+                            <div class="col-lg-5 trigger">
                               <span class="placeholder large">are you kidding?</span>
                             </div>
-                            <div class="col-lg-6 triggered">
+                            <div class="col-lg-5 triggered">
                               <textarea class="text optional form-control" cols="40" id="story_quiz_attributes_comment" name="story[quiz_attributes][comment]" placeholder="You can explain the correct answer" rows="20"></textarea>
                             </div>
                             <div class="save_status">
-                              <i class="icon-ok-sign"></i> saved
+                              <i class="icon-ok-sign"></i>saved
                             </div>
                           </div>
                         </div>
-                        <input id="story_quiz_attributes_id" name="story[quiz_attributes][id]" type="hidden" value="1">
                       </fieldset>
                     </form>
                   </div>

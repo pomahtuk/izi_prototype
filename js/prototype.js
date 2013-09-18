@@ -162,11 +162,31 @@
             return parent.html("<div class='extra'><i class='icon-user'></i></div> Publish <span class='caret'></span>");
           }
         });
-        return dropDown.find('#lang_selected').unbind('change').bind('change', function() {
-          var elem;
+        dropDown.find('#delete_story input[type=radio]').unbind('change').bind('change', function() {
+          var container, elem;
           elem = $(this);
-          if (elem.is(':checked')) {
-            return elem.parents('.form-group').next().show();
+          container = $('#delete_story');
+          if (elem.attr('id') === 'lang_selected') {
+            if (elem.is(':checked')) {
+              return $('#delete_story .other_variants').slideDown(150);
+            }
+          } else {
+            return $('#delete_story .other_variants').slideUp(150);
+          }
+        });
+        return $('#story_quiz_enabled, #story_quiz_disabled').unbind('change').bind('change', function() {
+          var elem, quiz;
+          elem = $(this);
+          quiz = dropDown.find('.form-wrap');
+          console.log(elem.val());
+          if (elem.attr('id') === 'story_quiz_enabled') {
+            $('label[for=story_quiz_enabled]').text('Enabled');
+            $('label[for=story_quiz_disabled]').text('Disable');
+            return true;
+          } else {
+            $('label[for=story_quiz_disabled]').text('Disabled');
+            $('label[for=story_quiz_enabled]').text('Enable');
+            return true;
           }
         });
       }
@@ -209,17 +229,17 @@
       $('.triggered > *').unbind('blur').bind('blur', function() {
         var elem, parent, save_status, target;
         elem = $(this);
+        parent = elem.parents('.triggered');
+        target = parent.prev();
         if (elem.val() !== '') {
-          parent = elem.parents('.triggered');
-          target = parent.prev();
           parent.hide();
           target.show().find('span').text(elem.val());
-          save_status = target.parent('.form-group').find('.save_status');
-          save_status.fadeIn(300);
-          return setTimeout(function() {
-            return save_status.fadeOut(300);
-          }, 800);
         }
+        save_status = target.parent('.form-group').find('.save_status');
+        save_status.fadeIn(300);
+        return setTimeout(function() {
+          return save_status.fadeOut(300);
+        }, 800);
       });
       $('i.icon-question-sign').popover();
       $('.form-group').unbind('mouseenter').bind('mouseenter', function(e) {

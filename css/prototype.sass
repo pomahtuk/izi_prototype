@@ -643,6 +643,7 @@ ul.exhibits
               position: relative
               top: 2px
           .other_variants
+            margin-left: 20px
             display: none
 
     #tabs_content
@@ -650,6 +651,14 @@ ul.exhibits
 
     .done_button
       margin-right: 15px
+
+    .switch.ios
+      width: 200px
+      margin-bottom: 20px
+      margin-left: 20px
+
+      label
+        cursor: pointer
 
     .form-group
 
@@ -685,6 +694,15 @@ ul.exhibits
           overflow-y: auto
           display: block
           border: 1px solid transparent
+
+      &.checkbox_added
+        margin-left: 0px
+        .coorect_answer_radio
+          float: left
+          vertical-align: center
+          margin-top: 10px
+          margin-right: 10px
+          cursor: pointer
 
       .triggered
         display: none

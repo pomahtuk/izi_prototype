@@ -150,11 +150,29 @@ $ ->
         else
           parent.html "<div class='extra'><i class='icon-user'></i></div> Publish <span class='caret'></span>"
 
-      dropDown.find('#lang_selected').unbind('change').bind 'change', ->
+      dropDown.find('#delete_story input[type=radio]').unbind('change').bind 'change', ->
         elem = $ @
-        if elem.is(':checked')
-          elem.parents('.form-group').next().show()
+        container = $('#delete_story')
+        if elem.attr('id') is 'lang_selected'
+          if elem.is(':checked')
+            $('#delete_story .other_variants').slideDown(150)
+        else
+          $('#delete_story .other_variants').slideUp(150)
 
+      $('#story_quiz_enabled, #story_quiz_disabled').unbind('change').bind 'change', ->
+        elem = $ @
+        quiz = dropDown.find('.form-wrap')
+        console.log elem.val()
+        if elem.attr('id') is 'story_quiz_enabled'
+          $('label[for=story_quiz_enabled]').text('Enabled')
+          $('label[for=story_quiz_disabled]').text('Disable')
+          #should someway publish model
+          true
+        else
+          $('label[for=story_quiz_disabled]').text('Disabled')
+          $('label[for=story_quiz_enabled]').text('Enable')
+          #should someway unpublish model
+          true
 
   $(window).resize ->
     findActive().each ->
@@ -186,17 +204,17 @@ $ ->
 
     $('.triggered > *').unbind('blur').bind 'blur', ->
       elem = $ @
+      parent = elem.parents('.triggered')
+      target = parent.prev()
       if elem.val() isnt ''
-        parent = elem.parents('.triggered')
-        target = parent.prev()
         parent.hide()
         target.show().find('span').text elem.val()
 
-        save_status = target.parent('.form-group').find('.save_status')
-        save_status.fadeIn(300)
-        setTimeout ->
-          save_status.fadeOut(300)
-        , 800
+      save_status = target.parent('.form-group').find('.save_status')
+      save_status.fadeIn(300)
+      setTimeout ->
+        save_status.fadeOut(300)
+      , 800
 
     $('i.icon-question-sign').popover()
 
