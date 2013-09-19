@@ -71,11 +71,14 @@ $ ->
   ###########################################################################################
   ###########################################################################################
 
-  dropDown   = $('#drop_down').remove().removeClass('hidden')
+  $.fn.refresh = -> $(this.selector)
+  $.fn.isEmpty = -> @length == 0
+
+  dropDown   = $('#drop_down').removeClass('hidden').hide()#.remove()
 
   museums_search_array = []
 
-  findActive = -> $('ul.exhibits li.active')
+  findActive = -> $('ul.exhibits li.exhibit.active')
 
   fillDropDown = (object) ->
     dropDown.find('p').html(object.description)
@@ -84,39 +87,44 @@ $ ->
       html = object.images.map((i) -> "<img src=\"#{i.big_url}\">").join('')
       dropDown.find('.slides').html(html).slidesjs slidesjs_options
 
+  dummy_focusout_process = (active) ->
+    if dropDown.find('#name').val() is ''
+      remove = true
+      for field in dropDown.find('#media .form-control:not(#opas_number)')
+        field = $ field
+        if field.val() isnt ''
+          remove = false
+      if remove
+        active.remove()
+      else
+        number = active.data('number')
+        $('ul.exhibits').append modal_template(number)
+        $('#dummyModal').modal { show: true, backdrop: 'static' }
+        $('#dummyModal').find('.btn-default').click ->
+          active.remove()
+          $('#dummyModal, .modal-backdrop').remove()
+        $('#dummyModal').find('.btn-primary').click ->
+          active.removeClass('dummy')
+          dropDown.find('#name').val("item_#{number}")
+          active.find('.opener').removeClass 'draft'
+          $('#dummyModal, .modal-backdrop').remove()
+
   closeDropDown = ->
     active = findActive()
     if active.hasClass 'dummy'
-      if dropDown.find('#name').val() is ''
-        remove = true
-        for field in dropDown.find('#media .form-control:not(#opas_number)')
-          field = $ field
-          if field.val() isnt ''
-            remove = false
-        if remove
-          active.remove()
-        else
-          number = active.data('number')
-          $('ul.exhibits').append modal_template(number)
-          $('#dummyModal').modal { show: true, backdrop: 'static' }
-          $('#dummyModal').find('.btn-default').click ->
-            active.remove()
-            $('#dummyModal, .modal-backdrop').remove()
-          $('#dummyModal').find('.btn-primary').click ->
-            active.removeClass('dummy')
-            dropDown.find('#name').val("item_#{number}")
-            active.find('.opener').removeClass 'draft'
-            $('#dummyModal, .modal-backdrop').remove()
-    dropDown.remove()
+      dummy_focusout_process(active)
+    dropDown.hide()
     active.removeClass('active')
 
   attachDropDown = (li) ->
-    hasParent = dropDown.parent().length > 0
-    dropDown.insertAfter(lastOfLine(li))
+    hasParent = dropDown.hasClass 'inited'
+    dropDown.show().insertAfter(lastOfLine(li))
 
     unless hasParent
 
-      dropDown.find('a.done').unbind('click').bind 'click', (e) ->
+      dropDown.addClass 'inited'
+
+      dropDown.find('a.done, .close').unbind('click').bind 'click', (e) ->
         e.preventDefault()
         closeDropDown()
 
@@ -146,7 +154,7 @@ $ ->
         elem = $ @
         parent = elem.parents('.dropdown-menu').prev('.dropdown-toggle')
         if elem.hasClass 'everyone'
-          parent.html "<div class='extra'><i class='icon-globe'></i></div><span class='caret'></span>"
+          parent.html "<div class='extra'><i class='icon-globe'></i></div> Published <span class='caret'></span>"
         else
           parent.html "<div class='extra'><i class='icon-user'></i></div> Publish <span class='caret'></span>"
 
@@ -174,12 +182,19 @@ $ ->
           #should someway unpublish model
           true
 
+      dropDown.find('a.delete_story').unbind('click').bind 'click', (e) ->
+        elem = $ @
+        if elem.hasClass 'no_margin'
+          e.preventDefault()
+          e.stopPropagation()
+          closeDropDown()
+
   $(window).resize ->
     findActive().each ->
-      dropDown.remove()
+      dropDown.hide()
       attachDropDown @
     museum_list_prepare()
-    fields_behaviour()
+    # fields_behaviour()
 
   hide_popovers = (target) ->
     $(".icon-question-sign").each ->
@@ -210,11 +225,24 @@ $ ->
         parent.hide()
         target.show().find('span').text elem.val()
 
-      save_status = target.parent('.form-group').find('.save_status')
-      save_status.fadeIn(300)
+      # code below - complet random and emulation      
+      show_loader = Math.round(Math.random()) > 0
+      timeout = 0
+      timeout = 1000 if show_loader
+
+      parent = target.parent('.form-group')
+
+      parent.append "<div class='preloader'></div>" if show_loader
+
       setTimeout ->
-        save_status.fadeOut(300)
-      , 800
+        save_status = parent.find('.save_status')
+        parent.find('.preloader').remove() if show_loader
+
+        save_status.fadeIn(300)
+        setTimeout ->
+          save_status.fadeOut(300)
+        , 800
+      , timeout
 
     $('i.icon-question-sign').popover()
 
@@ -278,6 +306,22 @@ $ ->
     $('.museum_navigation_menu .search_input .search_reset').click ->
       $('.museum_navigation_menu .search_input input').val('').keyup()
 
+  museum_filters = ->
+    $('.museum_filters a').click ->
+      elem = $ @
+      $('.museum_filters a').removeClass 'active'
+      elem.addClass 'active'
+      museums = $('ul.museum_list')
+      if elem.hasClass 'type_tour'
+        museums.find('>li:not(.tour)').hide()
+        museums.find('>li.tour').show()
+      else if elem.hasClass 'type_museum'
+        museums.find(' li:not(.museum)').hide()
+        museums.find('>li.museum').show()
+      else
+        museums.find('>li').show()
+
+
   create_museums_search_array = ->
     museums = $('ul.museum_list > li')
     for museum in museums
@@ -287,6 +331,7 @@ $ ->
   museum_list_prepare()
   create_museums_search_array()
   museum_search()
+  museum_filters()
 
   $('.filter_opener').click (e) ->
     e.preventDefault()
@@ -346,12 +391,17 @@ $ ->
   assign_click = ->
     $('ul.exhibits>li:not(#drop_down)>.opener .description, ul.exhibits>li:not(#drop_down)>.opener .overlay').unbind('click').bind 'click', (e) ->
 
-      clicked = $(@).closest('li')
+      # closeDropDown()
+      clicked = $(@).parents('li')
       if clicked.hasClass('active')
         closeDropDown()
         return false
 
       previous = findActive()
+
+      if previous.hasClass 'dummy'
+        dummy_focusout_process previous
+
       previous.removeClass('active')
       clicked.addClass('active')
 
@@ -428,10 +478,24 @@ $ ->
         keyEnabled: true
         supplied: "m4a, oga"
 
+      item_publish_settings = dropDown.find('.item_publish_settings')
+      done = dropDown.find('.done')
+      close = dropDown.find('.close')
+      delete_story = dropDown.find('.delete_story')
+
       if clicked.hasClass 'dummy'
         number = clicked.data('number')
         $('#opas_number').val(number).blur()
         $('#name').focus()
+        item_publish_settings.hide()
+        done.hide()
+        close.show()
+        delete_story.addClass('no_margin')
+      else
+        item_publish_settings.show()
+        done.show()
+        close.hide()
+        delete_story.removeClass('no_margin')
 
   assign_click()
 
@@ -537,18 +601,130 @@ $ ->
 
     number = get_number()
 
-    html = new_template(number)
-
-    exhibits.append html
+    dummy_item = $ new_template(number)
+    exhibits.append dummy_item
 
     assign_click()
 
-    exhibits.find('li.dummy').find('.opener .description').click()
+    collection = $('.exhibits>li.exhibit')
+    tileGrid(collection, tileWidth, tileSpace, tileListMargin)
 
+    exhibits.find('li.dummy').find('.opener .description').click()
     dropDown.find('#name').blur ->
       elem = $ @
       if elem.val() isnt ''
         active = findActive()
         active.removeClass('dummy').find('.opener').removeClass 'draft'
-
+        dropDown.find('.item_publish_settings').show()
+        dropDown.find('.done').show()
+        dropDown.find('.close').hide()
+        dropDown.find('.delete_story').removeClass('no_margin')
     false
+
+  ##########################################################################################
+  ## story-sets.js.coffee
+  ##########################################################################################
+  storySetImage = $('a.thumb')
+
+  $('#images, #maps').find('li.new').on 'click', 'a.upload-image, a.upload-map', (e) ->
+    e.preventDefault()
+    $this = $ this
+    $parent = $this.parents('#images, #maps')
+
+    if $parent.find('li:hidden').isEmpty()
+      $.ajax
+        url: $this.attr('href')
+        async: false
+        success: (response) ->
+          node = $(response).hide()
+          $parent.find('li.new').before node
+          initFileUpload e, node.find('.fileupload'), { progress: $this.find('.progress') }
+    $parent.find('li:hidden :file').trigger 'click'
+
+  $('#images, #maps').on 'click', 'a.remove', (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+    $this = $ this
+    $parent = $this.parents('#images, #maps')
+
+    if confirm($this.data('confirm'))
+      $.ajax
+        url: $this.attr('href')
+        type: $this.data('method')
+        data:
+          authentity_token: $('meta[name=csrf-token]').attr('content')
+        success: ->
+          fadeTime = 200
+          if $parent.attr('id').match(/images/)
+            $this.parents('li').fadeOut fadeTime, ->
+              $(this).remove()
+              storySetImage.trigger 'image:deleted'
+          else
+            $this.parents('li').fadeOut fadeTime, ->
+              $(this).remove()
+
+  $('#images, #maps').find('>ul[data-liftable]').each ->
+    $container = $ this
+    $parent = $container.parents('#images, #maps')
+    sendSortRequest = ->
+      formData = $container.sortable 'serialize'
+      formData += "&" + $('meta[name=csrf-param]').attr("content") +
+                  "=" + encodeURIComponent($('meta[name=csrf-token]').attr("content"))
+      $.ajax
+        type: 'post'
+        data: formData
+        dataType: 'script'
+        url: $container.data('sort-url')
+        success: ->
+          if $parent.attr('id').match(/images/)
+            storySetImage.trigger 'image:moved'
+    $container.disableSelection().sortable
+      axis: 'xy'
+      cursor: 'move'
+      update: sendSortRequest
+      items: 'li[id]'
+
+  storySetImage.on 'click', (e) ->
+    e.preventDefault()
+    $('div.tab-pane#images').each ->
+      $('div.tab-pane, ul.nav-pills li').removeClass('active')
+      $(this).addClass('active')
+      imagesTab.parent('li').addClass('active')
+
+  reloadMainImage = ->
+    $.ajax
+      url: storySetImage.data('reload-url')
+      type: 'get'
+      success: (response) ->
+        thumb = response.thumb || storySetImage.data('default-url')
+        thumb += '?_=' + new Date().getTime() if response.thumb
+        title = imagesTab.text().replace(/\d+/, response.count)
+        storySetImage.find('img').attr('src', thumb)
+        imagesTab.text title
+
+  updateDisplayedAndHidden = ->
+    itemSelector = 'li:not(.new)'
+
+    imagesList = $('.images-list')
+    displayedImages = imagesList.find('.images-displayed')
+    maxDisplayed = displayedImages.data('max-displayed')
+    displayedNow = displayedImages.find(itemSelector).length
+    hiddenImages = imagesList.find('.images-hidden')
+    getHiddenNow = -> hiddenImages.find(itemSelector).length
+    hiddenHeaders = imagesList.find('.hidden-header')
+
+    if displayedNow > maxDisplayed
+      displayedImages.find("#{itemSelector}:last").prependTo(hiddenImages)
+    else if displayedNow < maxDisplayed and getHiddenNow() > 0
+      hiddenImages.find("#{itemSelector}:first").appendTo(displayedImages)
+
+    hiddenHeaders.toggleClass('hidden', getHiddenNow() is 0)
+
+  processImageChanges = ->
+    reloadMainImage()
+    updateDisplayedAndHidden()
+
+  storySetImage.on 'image:uploaded', processImageChanges
+  storySetImage.on 'image:cropped', reloadMainImage
+  storySetImage.on 'image:deleted', processImageChanges
+  storySetImage.on 'image:moved', processImageChanges

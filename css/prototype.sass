@@ -141,6 +141,8 @@ body
   z-index: 1001
   position: relative
   max-height: 420px
+  overflow: auto
+  overflow-y: hidden
   display: none
 
   .museum_navbar
@@ -589,7 +591,7 @@ ul.exhibits
     left: inherit
     right: 0
 
-  >.images, >.description
+  >#images, >.description
     border-top: 1px solid #fff
     border-bottom: 1px solid #fff
     display: table-cell
@@ -597,7 +599,7 @@ ul.exhibits
     overflow: hidden
     vertical-align: top
 
-  .images
+  #images
     border-right: 1px solid #fff
     width: 30%
     vertical-align: middle
@@ -609,6 +611,16 @@ ul.exhibits
     text-align: left
     width: 70%
 
+    .close
+      background: url('../img/cross.png') center center no-repeat
+      cursor: pointer
+      height: 60px
+      position: absolute
+      right: 0
+      top: 12px
+      width: 60px
+      display: none
+
     .delete_story
       float: right
       display: block
@@ -616,6 +628,9 @@ ul.exhibits
       color: #666666
       font-size: 24px
       margin-top: -3px
+
+      &.no_margin
+        margin-right: 0px
 
       &:hover
         color: #000
@@ -664,6 +679,13 @@ ul.exhibits
 
       .col-lg-6
         margin-left: -13px
+
+      .preloader
+        float: left
+        width: 16px
+        height: 16px
+        margin-top: 7px
+        background: url('../img/small_loader.gif')
 
       .save_status
         line-height: 34px
@@ -757,6 +779,9 @@ ul.exhibits
 
   &.loading .full
     background: url('../img/ajax-loader.gif') no-repeat top center
+
+.muted
+  color: #666
 
 textarea
   resize: none
