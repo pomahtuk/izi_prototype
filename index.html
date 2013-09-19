@@ -212,7 +212,83 @@
         <ul class="exhibits">
           <li class="hidden" id="drop_down">
             <div class="prev-ex"></div>
-            <div class="images"></div>
+            <div class="images">
+              <div class="tab-pane active" id="images">
+                <div class="images-list ui-sortable" data-liftable="data-liftable" data-sort-url="/77/story_sets/5546/images/sort" style="">
+                  <h4 class="hidden-header hidden">
+                    Shown images
+                    <div class="help-tooltip">
+                      <i class="icon-question-sign icon tip" data-placement="right" title="The images from this list will be made visible in mobile app.&amp;lt;br&amp;gt;The list should contain no more than 16 images."></i>
+                    </div>
+                  </h4>
+                  <ul class="images-displayed" data-max-displayed="16">
+                    <li id="media_content_ids_38999" style="position: relative;">
+                      <form accept-charset="UTF-8" action="/77/story_sets/5546/images/38999" class="upload-form" data-remote="true" enctype="multipart/form-data" id="edit_image_38999" method="post">
+                        <div style="margin:0;padding:0;display:inline">
+                          <input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="slPXFPmxToMp04VZEhyFiOHAmj1fX4qmry9EFqFud5E=">
+                        </div>
+                        <input class="hide fileupload" data-accept="image" id="image_link" name="image[link]" type="file"><a class="thumbnail" href="/77/story_sets/5546/images/38999/crop.json"><img alt="" data-crop-url="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/2f12a234-be93-4f6d-8ff9-37ead034136f.jpg" src="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/2f12a234-be93-4f6d-8ff9-37ead034136f_thumb.jpg"></a><a class="remove" data-confirm="Are you sure you wish to delete this image?" data-method="delete" href="/77/story_sets/5546/images/38999" rel="nofollow"></a>
+                        <div class="progress progress-success progress-striped active hide">
+                          <div class="bar"></div>
+                        </div>
+                        <a class="browse update">Update image</a>
+                      </form>
+                    </li>
+                    <li id="media_content_ids_39000" style="position: relative;">
+                      <form accept-charset="UTF-8" action="/77/story_sets/5546/images/39000" class="upload-form" data-remote="true" enctype="multipart/form-data" id="edit_image_39000" method="post">
+                        <div style="margin:0;padding:0;display:inline">
+                          <input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="slPXFPmxToMp04VZEhyFiOHAmj1fX4qmry9EFqFud5E=">
+                        </div>
+                        <input class="hide fileupload" data-accept="image" id="image_link" name="image[link]" type="file"><a class="thumbnail" href="/77/story_sets/5546/images/39000/crop.json"><img alt="" data-crop-url="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/9efe1d5c-047c-4ae3-989c-62ac7af7206a.jpg" src="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/9efe1d5c-047c-4ae3-989c-62ac7af7206a_thumb.jpg"></a><a class="remove" data-confirm="Are you sure you wish to delete this image?" data-method="delete" href="/77/story_sets/5546/images/39000" rel="nofollow"></a>
+                        <div class="progress progress-success progress-striped active hide">
+                          <div class="bar"></div>
+                        </div>
+                        <a class="browse update">Update image</a>
+                      </form>
+                    </li>
+                  </ul>
+                  <h4 class="hidden-header hidden">
+                    More images
+                    <div class="help-tooltip">
+                      <i class="icon-question-sign icon tip" data-placement="right" title="The images from this list will not be visible in mobile app.&amp;lt;br&amp;gt;To make the image visible in mobile app, please,&amp;lt;br&amp;gt;move it to the upper list by holding down the left mouse button."></i>
+                    </div>
+                  </h4>
+                  <ul class="images-hidden">
+                    <li class="new">
+                      <a class="upload-image" href="/77/story_sets/5546/images/new">
+                        <div class="picture"></div>
+                        <div class="progress progress-success progress-striped active hide">
+                          <div class="bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="name">Upload image
+                          <div class="help-tooltip">
+                            <i class="icon-question-sign icon tip" data-original-title="Upload exhibit photograph in JPEG or PNG format.&amp;lt;br&amp;gt;This image will be shown to the mobile application user on their smartphone or tablet.&amp;lt;br&amp;gt;Use high quality images that are not too large.&amp;lt;br&amp;gt;The most advantageous photograph proportions are 4:3." data-placement="right"></i>
+                          </div>
+                        </span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal hide crop-wrap" id="crop_modal">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal"></button>
+                    <h3>
+                      Crop image
+                      <div class="help-tooltip">
+                        <i class="icon-question-sign icon tip" data-placement="bottom" title="In this window you may crop the uploaded photograph. Remember that, on a smartphone screen, 4:3 proportioned photographs look the most appealing. The cropping frame has these proportions as the default."></i>
+                      </div>
+                    </h3>
+                  </div>
+                  <div class="modal-body" style="min-height: 0px;">
+                    <div class="image-for-crop">
+                      <img src="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/2f12a234-be93-4f6d-8ff9-37ead034136f.jpg" style="display: block; visibility: hidden; width: 2304px; height: 1536px;">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-primary save-crop">Save</a><a class="btn" data-dismiss="modal">Cancel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="description">
               <div class="btn-group pull-right item_publish_settings">
                 <button class="btn btn-success dropdown-toggle" data-toggle="dropdown" type="button">

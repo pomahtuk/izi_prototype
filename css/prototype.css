@@ -773,10 +773,6 @@ ul.exhibits > li.exhibit .draft .visibility {
   vertical-align: middle;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003605}}
-#drop_down .images img {
-  height: 450px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003608}}
 #drop_down .description {
   background: url("../img/images-separator.png") repeat-y 0 0;
   padding: 30px 80px 0 55px;
@@ -784,7 +780,7 @@ ul.exhibits > li.exhibit .draft .visibility {
   text-align: left;
   width: 70%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003615}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003612}}
 #drop_down .description .delete_story {
   float: right;
   display: block;
@@ -793,90 +789,90 @@ ul.exhibits > li.exhibit .draft .visibility {
   font-size: 24px;
   margin-top: -3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003623}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003620}}
 #drop_down .description .delete_story:hover {
   color: black;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003628}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003625}}
 #drop_down .description #delete_story .modal-dialog {
   width: 350px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003630}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003627}}
 #drop_down .description #delete_story .modal-dialog .btn {
   margin-left: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003632}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003629}}
 #drop_down .description #delete_story .modal-dialog .modal-body {
   padding-bottom: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003634}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003631}}
 #drop_down .description #delete_story .modal-dialog .modal-body label {
   font-weight: normal;
   text-align: left;
   padding: 0px 0px 0px 20px;
   line-height: 34px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003640}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003637}}
 #drop_down .description #delete_story .modal-dialog .modal-body label input {
   margin-right: 5px;
   vertical-align: center;
   position: relative;
   top: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003645}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003642}}
 #drop_down .description #delete_story .modal-dialog .modal-body .other_variants {
   margin-left: 20px;
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003649}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003646}}
 #drop_down .description #tabs_content {
   margin-top: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003652}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003649}}
 #drop_down .description .done_button {
   margin-right: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003655}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003652}}
 #drop_down .description .switch.ios {
   width: 200px;
   margin-bottom: 20px;
   margin-left: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003660}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003657}}
 #drop_down .description .switch.ios label {
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003665}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003662}}
 #drop_down .description .form-group .col-lg-2 {
   min-width: 150px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003668}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003665}}
 #drop_down .description .form-group .col-lg-6 {
   margin-left: -13px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003671}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003668}}
 #drop_down .description .form-group .save_status {
   line-height: 34px;
   display: none;
   color: #888888;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003676}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003673}}
 #drop_down .description .form-group .save_status i {
   margin-right: 5px;
   color: #13b013;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003680}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003677}}
 #drop_down .description .form-group .trigger {
   min-height: 34px;
   line-height: 34px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003684}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003681}}
 #drop_down .description .form-group .trigger .placeholder {
   padding-left: 13px;
   min-width: 300px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003688}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003685}}
 #drop_down .description .form-group .trigger .large {
   width: 100%;
   height: 130px;
@@ -887,11 +883,11 @@ ul.exhibits > li.exhibit .draft .visibility {
   display: block;
   border: 1px solid transparent;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003698}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003695}}
 #drop_down .description .form-group.checkbox_added {
   margin-left: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003700}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003697}}
 #drop_down .description .form-group.checkbox_added .coorect_answer_radio {
   float: left;
   vertical-align: center;
@@ -899,19 +895,19 @@ ul.exhibits > li.exhibit .draft .visibility {
   margin-right: 10px;
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003707}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003704}}
 #drop_down .description .form-group .triggered {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003710}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003707}}
 #drop_down .description .form-group .triggered > * {
   min-width: 300px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003714}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003711}}
 #drop_down .description .form-group .triggered textarea {
   height: 130px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003717}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003714}}
 #drop_down .description .form-group .help {
   width: 15px;
   height: 34px;
@@ -921,27 +917,27 @@ ul.exhibits > li.exhibit .draft .visibility {
   left: -10px;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003726}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003723}}
 #drop_down .description .form-group .dropdown {
   position: absolute;
   top: 15px;
   left: 60px;
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003729}}
 #drop_down .description .form-group .dropdown a {
   color: #222222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003735}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003732}}
 #drop_down .description .form-group:not(.last):hover {
   background: #e5e5e5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003738}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003735}}
 #drop_down .description .form-group:not(.last):hover .help {
   visibility: visible;
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003742}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003739}}
 #drop_down .description .form-group:not(.last):hover .placeholder {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -959,59 +955,137 @@ ul.exhibits > li.exhibit .draft .visibility {
   border: 1px solid #b4b4b4;
   min-width: 300px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003754}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003751}}
 #drop_down .description .form-group:not(.last):hover .placeholder.large {
   padding: 6px 12px;
   line-height: 1.44;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003758}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003755}}
 #drop_down .description #qr_code img {
   height: 300px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003761}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003758}}
 #drop_down.loading .full {
   background: url("../img/ajax-loader.gif") no-repeat top center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003764}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003761}}
 textarea {
   resize: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003767}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003764}}
 .btn-warning {
   color: white;
   background-color: #f56600;
   border-color: #f56600;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003772}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003769}}
 .item_publish_settings {
   position: relative;
   top: -5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003776}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003773}}
 .item_publish_settings .extra {
   margin-right: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003779}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003776}}
 .form-group {
   margin-bottom: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003782}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003779}}
 .popover-content, .popover {
   min-width: 400px;
   line-height: 1.44;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003788}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003785}}
+.images-list, .maps-list {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003789}}
+.images-list li, .maps-list li {
+  display: inline-block;
+  margin: 0 30px 30px 0;
+  position: relative;
+  vertical-align: top;
+  width: 170px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003796}}
+.images-list li .thumbnail img, .maps-list li .thumbnail img {
+  max-height: 120px;
+  max-width: 160px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003800}}
+.images-list li a, .maps-list li a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003803}}
+.images-list li img, .images-list li .picture, .maps-list li img, .maps-list li .picture {
+  z-index: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003806}}
+.images-list li .progress, .maps-list li .progress {
+  left: 10px;
+  position: absolute;
+  top: 60px;
+  width: 150px;
+  z-index: 2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003813}}
+.images-list li .progress .bar, .maps-list li .progress .bar {
+  z-index: 3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003816}}
+.images-list li .remove, .maps-list li .remove {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 18px;
+  position: absolute;
+  right: 15px;
+  text-shadow: black 0 0 5px;
+  top: 5px;
+  z-index: 3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003827}}
+.images-list li .remove:hover, .maps-list li .remove:hover {
+  color: black;
+  text-shadow: white 0 0 10px, white 0 0 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003831}}
+.images-list li .browse.update, .maps-list li .browse.update {
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  width: 170px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003838}}
+.images-list li .name, .maps-list li .name {
+  color: black;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003846}}
+.images-list li.new .picture, .maps-list li.new .picture {
+  background: url("/img/new-item.png");
+  height: 130px;
+  width: 170px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003856}}
 .nav-tabs {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003791}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003859}}
 .nav-tabs > li > a {
   -webkit-border-radius: 2px 2px 0 0;
   -moz-border-radius: 2px 2px 0 0;
@@ -1019,7 +1093,7 @@ textarea {
   color: #666666;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003797}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003865}}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover {
   font-weight: bold;
@@ -1028,12 +1102,12 @@ textarea {
   border: 1px solid transparent;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003804}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003872}}
 .nav-tabs-google > li {
   margin: 0 1px 0 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003807}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003875}}
 .nav-tabs-google > li > a {
   padding-top: 2px;
   padding-bottom: 6px;
@@ -1042,38 +1116,38 @@ textarea {
   border: 1px solid transparent;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003814}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003882}}
 .nav-tabs-google > li:hover > a {
   color: #222222;
   background-color: #f8f8f8;
   border-color: #f8f8f8 #f8f8f8 #f8f8f8;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003819}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003887}}
 .nav-tabs-google > li > a:active {
   color: #dd4b39;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003822}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003890}}
 .nav-tabs-google li:hover {
   color: #333333;
   border-bottom: 3px solid #dd4b39;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003826}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003894}}
 .nav-tabs-google li.active {
   font-weight: bold;
   border-bottom: 3px solid #dd4b39;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003830}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003898}}
 .nav-tabs-google > .active > a,
 .nav-tabs-google > .active > a:hover {
   color: #333333;
   border: 1px solid transparent;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003835}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003903}}
 .modal.fade .modal-dialog {
   -webkit-transform: translate(50%, -25%);
   -ms-transform: translate(50%, -25%);
@@ -1086,7 +1160,7 @@ textarea {
   position: absolute;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003846}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003914}}
 .modal.in .modal-dialog {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1095,7 +1169,7 @@ textarea {
   position: absolute;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003853}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ilja\/Desktop\/izi_prototype\/css\/prototype\.sass}line{font-family:\00003921}}
 .fade.in {
   opacity: 1;
   background: rgba(0, 0, 0, 0.5);

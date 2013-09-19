@@ -355,8 +355,7 @@ $ ->
       previous.removeClass('active')
       clicked.addClass('active')
 
-      slides = $('<div>').addClass('slides').html \
-        "<img src=\"#{clicked.data('big-image')}\">"
+      # slides = $('<div>').addClass('slides').html "<img src=\"#{clicked.data('big-image')}\">"
 
       # qr_link = clicked.data('qr-code')
       # $.ajax
@@ -398,7 +397,7 @@ $ ->
       #   dropDown.find('.images').html images
       #   # fields_behaviour()
 
-      slides.appendTo dropDown.find('.images').html('')
+      # slides.appendTo dropDown.find('.images').html('')
       dropDown.find('h2').text(clicked.find('h4').text())
 
       # if fullObject = clicked.data('full-object')

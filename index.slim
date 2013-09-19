@@ -235,6 +235,71 @@ html
           li#drop_down.hidden
             .prev-ex
             .images
+              #images.tab-pane.active
+                .images-list.ui-sortable data-liftable="data-liftable" data-sort-url="/77/story_sets/5546/images/sort" style=""
+                  h4.hidden-header.hidden
+                    | Shown images
+                    .help-tooltip
+                      i.icon-question-sign.icon.tip data-placement="right" title="The images from this list will be made visible in mobile app.&lt;br&gt;The list should contain no more than 16 images."
+                  ul.images-displayed data-max-displayed="16"
+                    li#media_content_ids_38999 style="position: relative;"
+                      form#edit_image_38999.upload-form accept-charset="UTF-8" action="/77/story_sets/5546/images/38999" data-remote="true" enctype="multipart/form-data" method="post"
+                        div style="margin:0;padding:0;display:inline"
+                          input name="utf8" type="hidden" value="✓"
+                          input name="_method" type="hidden" value="put"
+                          input name="authenticity_token" type="hidden" value="slPXFPmxToMp04VZEhyFiOHAmj1fX4qmry9EFqFud5E="
+                        input#image_link.hide.fileupload data-accept="image" name="image[link]" type="file"
+                        a.thumbnail href="/77/story_sets/5546/images/38999/crop.json"
+                          img alt="" data-crop-url="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/2f12a234-be93-4f6d-8ff9-37ead034136f.jpg" src="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/2f12a234-be93-4f6d-8ff9-37ead034136f_thumb.jpg"
+                        a.remove data-confirm="Are you sure you wish to delete this image?" data-method="delete" href="/77/story_sets/5546/images/38999" rel="nofollow"
+                        .progress.progress-success.progress-striped.active.hide
+                          .bar
+                        a.browse.update
+                          | Update image
+                    li#media_content_ids_39000 style="position: relative;"
+                      form#edit_image_39000.upload-form accept-charset="UTF-8" action="/77/story_sets/5546/images/39000" data-remote="true" enctype="multipart/form-data" method="post"
+                        div style="margin:0;padding:0;display:inline"
+                          input name="utf8" type="hidden" value="✓"
+                          input name="_method" type="hidden" value="put"
+                          input name="authenticity_token" type="hidden" value="slPXFPmxToMp04VZEhyFiOHAmj1fX4qmry9EFqFud5E="
+                        input#image_link.hide.fileupload data-accept="image" name="image[link]" type="file"
+                        a.thumbnail href="/77/story_sets/5546/images/39000/crop.json"
+                          img alt="" data-crop-url="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/9efe1d5c-047c-4ae3-989c-62ac7af7206a.jpg" src="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/9efe1d5c-047c-4ae3-989c-62ac7af7206a_thumb.jpg"
+                        a.remove data-confirm="Are you sure you wish to delete this image?" data-method="delete" href="/77/story_sets/5546/images/39000" rel="nofollow"
+                        .progress.progress-success.progress-striped.active.hide
+                          .bar
+                        a.browse.update
+                          | Update image
+                  h4.hidden-header.hidden
+                    | More images
+                    .help-tooltip
+                      i.icon-question-sign.icon.tip data-placement="right" title="The images from this list will not be visible in mobile app.&lt;br&gt;To make the image visible in mobile app, please,&lt;br&gt;move it to the upper list by holding down the left mouse button."
+                  ul.images-hidden
+                    li.new
+                      a.upload-image href="/77/story_sets/5546/images/new"
+                        .picture
+                        .progress.progress-success.progress-striped.active.hide
+                          .bar style="width: 100%;"
+                        span.name
+                          | Upload image
+                          .help-tooltip
+                            i.icon-question-sign.icon.tip data-original-title="Upload exhibit photograph in JPEG or PNG format.&lt;br&gt;This image will be shown to the mobile application user on their smartphone or tablet.&lt;br&gt;Use high quality images that are not too large.&lt;br&gt;The most advantageous photograph proportions are 4:3." data-placement="right"
+                #crop_modal.modal.hide.crop-wrap
+                  .modal-header
+                    button.close data-dismiss="modal"
+                    h3
+                      | Crop image
+                      .help-tooltip
+                        i.icon-question-sign.icon.tip data-placement="bottom" title="In this window you may crop the uploaded photograph. Remember that, on a smartphone screen, 4:3 proportioned photographs look the most appealing. The cropping frame has these proportions as the default."
+                  .modal-body style="min-height: 0px;"
+                    .image-for-crop
+                      img src="https://s3-eu-west-1.amazonaws.com/original-media.dev.izi.travel/6f628c51-1ba0-48ef-8213-0c84253753e3/2f12a234-be93-4f6d-8ff9-37ead034136f.jpg" style="display: block; visibility: hidden; width: 2304px; height: 1536px;"
+                  .modal-footer
+                    a.btn.btn-primary.save-crop
+                      | Save
+                    a.btn data-dismiss="modal"
+                      | Cancel
+
             .description
               .btn-group.pull-right.item_publish_settings
                 button.btn.btn-success.dropdown-toggle data-toggle="dropdown" type="button"
@@ -492,7 +557,6 @@ html
                             .save_status
                               i.icon-ok-sign
                               | saved
-
                 #qr_code.tab-pane.row
                   .qr_image.col-lg-4
                     img#qr alt="Qr_code" src="/img/qr_code.png"
@@ -500,10 +564,8 @@ html
                     a.btn.qr-code href="/1/story_sets/8/qr_code.html" target="_blank" Print QR-code
                     br
                       p You can print the Exhibit's QR-code and place it near the Exhibit. When the MTG Client reads this code, it will open the Exhibit's page immediately. If there is no MTG Client installed on the user's phone, then it will take the user to a download page on either AppStore or Google Play.
-
                 #more.tab-pane
                   |hgsdfklghdfj kgkjdf hg
-
 
             .next-ex
 

@@ -602,9 +602,6 @@ ul.exhibits
     width: 30%
     vertical-align: middle
 
-    img
-      height: 450px
-
   .description
     background: url('../img/images-separator.png') repeat-y 0 0
     padding: 30px 80px 0 55px
@@ -782,6 +779,77 @@ textarea
 .popover-content, .popover
   min-width: 400px
   line-height: 1.44
+
+//
+// @import images
+.images-list, .maps-list
+  margin: 0
+  padding: 0
+
+  li
+    display: inline-block
+    margin: 0 30px 30px 0
+    position: relative
+    vertical-align: top
+    width: 170px
+
+    .thumbnail img
+      max-height: 120px
+      max-width: 160px
+
+    a
+      text-decoration: none
+
+    img, .picture
+      z-index: 1
+
+    .progress
+      left: 10px
+      position: absolute
+      top: 60px
+      width: 150px
+      z-index: 2
+
+      .bar
+        z-index: 3
+
+    .remove
+      color: white
+      font-size: 20px
+      font-weight: bold
+      line-height: 18px
+      position: absolute
+      right: 15px
+      text-shadow: #000 0 0 5px
+      top: 5px
+      z-index: 3
+
+      &:hover
+        color: #000
+        text-shadow: #fff 0 0 10px, #fff 0 0 5px
+
+    .browse.update
+      cursor: pointer
+      display: block
+      font-size: 14px
+      text-align: center
+      width: 170px
+
+    .name
+      color: black
+      display: block
+      font-size: 16px
+      text-align: center
+      width: 170px
+
+    &.new
+      .picture
+        background: url('/img/new-item.png')
+        height: 130px
+        width: 170px
+      .name
+        @extend .muted
+
 
 // GOOGLE bootstrap overrides
 

@@ -422,7 +422,7 @@
     });
     assign_click = function() {
       return $('ul.exhibits>li:not(#drop_down)>.opener .description, ul.exhibits>li:not(#drop_down)>.opener .overlay').unbind('click').bind('click', function(e) {
-        var clicked, number, previous, slides;
+        var clicked, number, previous;
         clicked = $(this).closest('li');
         if (clicked.hasClass('active')) {
           closeDropDown();
@@ -431,8 +431,6 @@
         previous = findActive();
         previous.removeClass('active');
         clicked.addClass('active');
-        slides = $('<div>').addClass('slides').html("<img src=\"" + (clicked.data('big-image')) + "\">");
-        slides.appendTo(dropDown.find('.images').html(''));
         dropDown.find('h2').text(clicked.find('h4').text());
         if (!isSameLine(clicked, previous)) {
           attachDropDown(clicked);
